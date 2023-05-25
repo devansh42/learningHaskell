@@ -43,7 +43,6 @@ reduceHistorgram' :: JoinedString -> [String]
 reduceHistorgram' (JoinedString ans nextIteration True) = ans : reduceHistorgram' (reduceHistorgram nextIteration [] False)
 reduceHistorgram' (JoinedString ans _ _) = [ans]
 
-suffix = ['=' | x <- [0 .. 9]] ++ "\n" ++ show [0 .. 9]
 
 notEmpty :: String -> Bool
 notEmpty x = length x > 0
